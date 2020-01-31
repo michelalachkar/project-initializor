@@ -1,5 +1,6 @@
 const fs = require("fs");
-
+const myComponents = require("./shellConfig.json").components;
+const myPages = require("./shellConfig.json").pages;
 const folderCreator = (baseFolder, arrayOfFolders) => {
   fs.mkdirSync(baseFolder, err => {
     if (err) throw err;
@@ -20,6 +21,6 @@ const folderCreator = (baseFolder, arrayOfFolders) => {
   });
 };
 
-folderCreator("components", ["Slider", "Header", "Body", "Navbar"]);
+folderCreator("components", myComponents);
 
-folderCreator("pages", ["home", "about", "contact"]);
+folderCreator("pages", myPages);

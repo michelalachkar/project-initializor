@@ -1,6 +1,6 @@
 const fs = require("fs");
-const myComponents = require("./shellConfig.json").components;
-const myPages = require("./shellConfig.json").pages;
+const myComponents = require("./componentPageConfig.json").components;
+const myPages = require("./componentPageConfig.json").pages;
 const folderCreator = (baseFolder, arrayOfFolders) => {
   fs.mkdirSync(baseFolder, err => {
     if (err) throw err;

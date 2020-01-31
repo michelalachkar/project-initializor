@@ -1,0 +1,16 @@
+{
+    "root": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "back": "cd back && npm start",
+        "front": "cd front && npm start",
+        "start": "concurrently --kill-others-on-fail --names \"back,front\" \"npm run back\" \"npm run front\"",
+        "postinstall": "cd front && npm install && cd .. && cd back && npm install"
+    },
+    "back": {
+        "start": "nodemon --exec babel-node ./src/index.js",
+        "build:clean": "rimraf ./build",
+        "build:build": "babel src --out-dir ./build --source-maps",
+        "build": "npm run build:clean && npm run build:build",
+        "production": "node ./build/index.js"
+    }
+}

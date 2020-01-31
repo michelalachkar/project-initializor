@@ -1,4 +1,11 @@
 {
-    "components": [],
-    "panges": []
+    "components": [
+        "Head",
+        "Body"
+    ],
+    "panges": [
+        "home",
+        "about",
+        "contact"
+    ]
 }

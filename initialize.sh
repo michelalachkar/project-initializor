@@ -12,7 +12,7 @@ npm init -y
 npm install --save @babel/cli @babel/core @babel/node @babel/present-env @babel/register nodemon rimraf
 npm install --save express muller express-session cookie-parse body-parser serve-favicon cors http-errors
 mkdir public
-node scriptsChanger.js back
+node ../scriptsChanger.js back
 mkdir src
 cd src
 touch index.js
